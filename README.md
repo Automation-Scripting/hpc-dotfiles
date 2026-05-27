@@ -7,7 +7,7 @@ Este diretorio contem uma versao Bash, portavel para Linux, das automacoes mais 
 Adicione ao seu `~/.bashrc`:
 
 ```bash
-source "/caminho/para/Automation-Scripting/dotfiles/bash/bootstrap.sh"
+source "$HOME/.dotfiles/bash/bootstrap.sh"
 ```
 
 No HPC, abra um novo terminal ou rode `source ~/.bashrc`.
@@ -76,3 +76,5 @@ reg-install sudo apt-get install -y jq
 # Registra e executa um comando de configuracao
 reg-config git config --global pull.rebase true
 ```
+
+Cada registro faz `git add` + `git commit` + `git push` automaticamente no repo de dotfiles quando houver remote configurado e autenticacao valida.

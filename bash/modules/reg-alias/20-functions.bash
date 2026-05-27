@@ -59,7 +59,13 @@ reg-alias() {
 
   if git -C "$dotfiles_root" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     git -C "$dotfiles_root" add "bash/modules/user/90-custom-aliases.bash"
-    git -C "$dotfiles_root" commit -m "reg-alias: $name" >/dev/null 2>&1 || true
+    if git -C "$dotfiles_root" commit -m "reg-alias: $name" >/dev/null 2>&1; then
+      if git -C "$dotfiles_root" push >/dev/null 2>&1; then
+        echo "pushed to origin"
+      else
+        echo "[WARN] commit feito, mas push falhou"
+      fi
+    fi
   fi
 }
 
