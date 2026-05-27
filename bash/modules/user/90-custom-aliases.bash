@@ -9,7 +9,7 @@ alias home='cd /home/avilamrs'
 alias bash='source /home/avilamrs/.bashrc'
 
 # [2026-05-27 09:58]
-alias dotfiles='cd'
+alias dotfiles='cd /home/avilamrs/.dotfiles'
 
 # [2026-05-27 09:59]
 alias data='cd /data/avilamrs'
