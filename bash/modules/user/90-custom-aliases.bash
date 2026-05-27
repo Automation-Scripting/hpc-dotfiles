@@ -10,3 +10,6 @@ alias dotfiles='cd /home/avilamrs/.dotfiles'
 
 # [2026-05-27 09:59]
 alias data='cd /data/avilamrs'
+
+# [2026-05-27 10:17]
+alias code-space='cd /data/avilamrs/code-space'
