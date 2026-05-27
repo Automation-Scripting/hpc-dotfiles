@@ -51,6 +51,8 @@ Assim:
   - `reg-alias` / `aliases`
   - `reg-install` / `installs`
   - `reg-config` / `configs`
+  - `reg-export` / `exports`
+  - `reg-symlink` / `symlink`
 
 ## O que foi deixado de fora
 
@@ -91,6 +93,12 @@ reg-install sudo apt-get install -y jq
 
 # Registra e executa um comando de configuracao
 reg-config git config --global pull.rebase true
+
+# Registra e ativa uma variavel de ambiente
+reg-export API_TOKEN=abc123
+
+# Registra e aplica um symlink (target relativo ao HOME)
+reg-symlink bash/bootstrap.sh .dotfiles/bootstrap.sh
 ```
 
 Cada registro faz `git add` + `git commit` + `git push` automaticamente no repo de dotfiles quando houver remote configurado e autenticacao valida.
